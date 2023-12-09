@@ -18,7 +18,7 @@ export default function Footer() {
             rel="noreferrer"
           >
             <img
-              src="/src/assets/github-gray.svg"
+              src="/assets/github-gray.svg"
               alt="GitHub logo"
               className="w-5 h-auto hover:scale-110 transition-all"
             />
