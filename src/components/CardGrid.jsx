@@ -1,10 +1,8 @@
 import Card from "./Card";
 import cards from "../constants/cards.js";
 import cardShuffler from "../constants/cardShuffler.js";
-import { useState } from "react";
 
 export default function CardGrid({ streak, setStreak }) {
-  const [shuffleKey, setShuffleKey] = useState(0);
   const shuffledCards = cardShuffler(cards);
 
   // This is to ensure that the displayed cards contains at least 1 unclicked card.
@@ -21,18 +19,15 @@ export default function CardGrid({ streak, setStreak }) {
     shuffledCards.splice(randomIndex, 1, randomNonClickedCard);
   }
 
-  const handleShuffleAnimation = () => {
-    setShuffleKey(shuffleKey + 1);
-  };
-
   return (
-    <div
-      key={shuffleKey}
-      onClick={handleShuffleAnimation}
-      className="p-16 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center"
-    >
+    <div className="p-16 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center">
       {shuffledCards.map((card) => (
-        <Card key={card.id} card={card} streak={streak} setStreak={setStreak} />
+        <Card
+          key={Math.random()}
+          card={card}
+          streak={streak}
+          setStreak={setStreak}
+        />
       ))}
     </div>
   );

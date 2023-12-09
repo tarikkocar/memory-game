@@ -51,7 +51,7 @@ export default function Help({ isHelpOpen, setIsHelpOpen }) {
                 href="https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder"
                 target="_blank"
                 rel="noreferrer"
-                className="after:content-[url(/src/assets/open_in_new_FILL0_wght400_GRAD0_opsz24.svg)] after:invert-[.84] after:sepia-[.05] after:saturate-[21.03] after:hue-rotate-[184deg] after:brightness-[1.01] after:contrast-[.99]] after:ml-[2px] after:mr-[3px]"
+                className="after:content-[url(/assets/open_in_new_FILL0_wght400_GRAD0_opsz24.svg)] after:invert-[.84] after:sepia-[.05] after:saturate-[21.03] after:hue-rotate-[184deg] after:brightness-[1.01] after:contrast-[.99]] after:ml-[2px] after:mr-[3px]"
               >
                 Pieter Bruegel the Elder
               </a>{" "}
