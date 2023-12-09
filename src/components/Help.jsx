@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Help({ isHelpOpen, setHelpOpen }) {
+export default function Help({ isHelpOpen, setIsHelpOpen }) {
   const stopPropagation = (e) => {
     e.stopPropagation();
   };
 
   const handleEscapeDown = (e) => {
     if (e.key === "Escape") {
-      setHelpOpen(false);
+      setIsHelpOpen(false);
     }
   };
 
@@ -25,8 +25,8 @@ export default function Help({ isHelpOpen, setHelpOpen }) {
       {isHelpOpen && (
         <motion.div
           key="modal"
-          onClick={() => setHelpOpen(false)}
-          className="z-20 absolute inset-0 bg-cover flex items-center justify-center backdrop-blur-sm bg-orange-50/50"
+          onClick={() => setIsHelpOpen(false)}
+          className="z-20 fixed inset-0 bg-cover flex items-center justify-center backdrop-blur-sm bg-orange-50/50"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
@@ -34,14 +34,14 @@ export default function Help({ isHelpOpen, setHelpOpen }) {
         >
           <motion.div
             onClick={stopPropagation}
-            className="p-4 pb-14 bg-stone-800 text-blue-200 ring-2 ring-stone-500 rounded-2xl shadow-xl w-1/2 max-w-[40rem] max-[600px]:w-3/4 max-[600px]:text-xs flex flex-col items-center"
+            className="p-4 pb-14 bg-stone-800 text-blue-200 ring-2 ring-stone-500 rounded-2xl shadow-xl w-1/2 max-w-[40rem] max-[800px]:w-3/4 max-[800px]:text-xs flex flex-col items-center"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.5 }}
           >
             <span
-              onClick={() => setHelpOpen(false)}
+              onClick={() => setIsHelpOpen(false)}
               className="ml-auto mr-2 cursor-pointer font-bold"
             >
               X

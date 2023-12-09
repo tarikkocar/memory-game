@@ -2,11 +2,11 @@ import { useState } from "react";
 import Help from "./Help";
 
 export default function Footer() {
-  const [isHelpOpen, setHelpOpen] = useState(false);
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
 
   return (
     <>
-      <Help isHelpOpen={isHelpOpen} setHelpOpen={setHelpOpen} />
+      <Help isHelpOpen={isHelpOpen} setIsHelpOpen={setIsHelpOpen} />
 
       <div className="grid grid-cols-3 justify-center items-center gap-2 py-6 px-10 mt-auto w-full">
         <div className="col-span-1"></div>
@@ -25,7 +25,7 @@ export default function Footer() {
           </a>
         </div>
         <span
-          onClick={() => setHelpOpen(true)}
+          onClick={() => setIsHelpOpen(true)}
           className="material-symbols-outlined scale-125 justify-self-end hover:scale-[1.4] transition-all cursor-pointer"
         >
           help
