@@ -6,7 +6,7 @@ export default function GameOver({ streak, setStreak }) {
       {streak.length == 12 && (
         <motion.div
           key="gameOver"
-          className="z-20 absolute inset-0 flex items-center justify-center backdrop-blur-sm bg-orange-50/50"
+          className="z-20 fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-orange-50/50"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
